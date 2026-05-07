@@ -19,3 +19,13 @@ git pull origin master
 ```
 
 
+## Python Foundation:
+
+- Primitive Variables
+- Function
+- Object
+- Class
+- Class deep dive
+- Operation & Conditions
+- Loops
+- ...
