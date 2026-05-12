@@ -75,3 +75,13 @@ def calculate(a):  # 2
 
 # CALL
 calculate(5)
+
+g = 100
+
+
+def findLetter(j):
+    k = j + g
+    print(f"just test: {k}")
+
+
+findLetter(9)
