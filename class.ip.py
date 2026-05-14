@@ -9,7 +9,7 @@ print("==== INHERITANCE ====")
 # PARENT > CHILD [only public & protected properties(state + method)]
 
 
-class Animal:
+class Animal(object):
 
     description = "The class is parent for animals"
 
@@ -33,6 +33,9 @@ class Dog(Animal):
 
     def protect(self):
         print("Yes, I can protect you!")
+
+    def make_voice(self):
+        print(f"the {self.name} says: {self.sound}")
 
 
 class Cat(Animal):
@@ -88,3 +91,29 @@ print(dog.voice, fish.voice)
 print("dog.status:", dog._status)
 # print("fish.status:", fish.status)
 # print("cat.status:", cat.status)
+
+
+# Bir narsaning bir necha xil shaklga ega bo'lishi yoki bir xil methodning turli xil shaklga ega bolishi
+print("==== POLIMORPHISM ====")
+
+
+dog.make_voice()
+cat.make_voice()
+
+
+print("========")
+# fish > Fish > Animal > object
+a = isinstance(fish, Fish)
+b = isinstance(fish, Animal)
+c = isinstance(fish, object)
+d = isinstance("MIT", object)
+result = a and b and c and d
+print(f"the result: {result}")
+
+
+# Fish > Animal > object
+
+data1 = issubclass(Fish, Animal)
+
+data2 = issubclass(Animal, object)
+print("data:", data1, data2)
